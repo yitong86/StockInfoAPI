@@ -34,7 +34,7 @@ public class StockController {
         String URL = "https://www.alphavantage.co/query?function=OVERVIEW&symbol=" + symbol+"&apikey=" + apiKey;
 
         //make the request
-        //ApiModel test = new ApiModel();
+       // ApiModel test = new ApiModel();
         ApiModel response = restTemplate.getForObject(URL, ApiModel.class);
         //return the data
         //System.out.println(URL);

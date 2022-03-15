@@ -1,32 +1,51 @@
 package com.careerdevs.stockInfoAPI.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class ApiModel {
-    private String Symbol;
-    private String AssetType;
-    private String Name;
-
-    @Override
-    public String toString() {
-        return "ApiModel{" +
-                "Symbol='" + Symbol + '\'' +
-                ", AssetType='" + AssetType + '\'' +
-                ", Name='" + Name + '\'' +
-                '}';
-    }
-
+    @JsonProperty("Symbol") private String symbol;
+    @JsonProperty("Name") private String assetType;
+    @JsonProperty("Description") private String name;
+    @JsonProperty("MarketCapitalization") private String marketCapitalization;
+    @JsonProperty("Exchange") private String exchange;
+    @JsonProperty("Currency") private String currency;
 
     public String getSymbol() {
-        return Symbol;
+        return symbol;
     }
 
     public String getAssetType() {
-        return AssetType;
+        return assetType;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
+
+    public String getMarketCapitalization() {
+        return marketCapitalization;
+    }
+
+    public String getExchange() {
+        return exchange;
+    }
+
+    public String getCurrency() {
+        return currency;
+    }
+
     public ApiModel(){
 
+    }
+    @Override
+    public String toString() {
+        return "ApiModel{" +
+                "symbol='" + symbol + '\'' +
+                ", assetType='" + assetType + '\'' +
+                ", name='" + name + '\'' +
+                ", MarketCapitalization='" + marketCapitalization + '\'' +
+                ", Exchange='" + exchange + '\'' +
+                ", Currency='" + currency + '\'' +
+                '}';
     }
 }
